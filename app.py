@@ -42,7 +42,7 @@ if prompt := st.chat_input("Type something..."):
                 "Content-Type": "application/json"
             }
             payload = {
-                "model": "llama-3.1-8b-instant", # Updated active model
+                "openai/gpt-oss-20b", # Updated active model
                 "messages": st.session_state.messages
             }
             try:
