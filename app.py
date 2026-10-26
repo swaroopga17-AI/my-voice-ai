@@ -41,8 +41,9 @@ if prompt := st.chat_input("Type something..."):
                 "Authorization": f"Bearer {GROQ_API_KEY}",
                 "Content-Type": "application/json"
             }
+            # The syntax error was caused by a missing comma in this payload dictionary
             payload = {
-                "openai/gpt-oss-20b", # Updated active model
+                "model": "llama3-8b-8192",
                 "messages": st.session_state.messages
             }
             try:
